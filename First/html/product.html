@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<title>Netlify – Product Exercise</title>
+	</head>
+<body>
+<h1>Netlify – Product Exercise</h1>
+
+<h2>Brief</h2>
+
+<p>Currently on app.netlify.com, the main navigation is using a &quot;All teams&quot; as default to show every site that a logged user has access to (which is a sum of all of the Personal Sites + Sites of Teams that the user is a part of + Sites that the user is a collaborator on). This can be a bit confusing from an information architecture sense, and it&#39;s hiding other parts of the app like &quot;Domains&quot;. How can we simplify this mental model and surface the Domains screen?</p>
+
+<h2>Reframing the Problem</h2>
+
+<p>Before this document starts, it needs to be said that, because I don’t have any business context, and I don’t know the long term goal and the current and future KPIs, I am going to be focusing purely on the user experience of the problem, though I’ll make sure to try to:</p>
+
+<ul>
+	<li>Increase visibility of current and probably future features.</li>
+	<li>Organize the information architecture to try to increase conversion.</li>
+</ul>
+
+<h3>Background </h3>
+
+<p>Having conducted a quick content audit of the main page of the app, we can see that there are three main types of <em>categories</em>:</p>
+
+<ul>
+	<li>Personal: user’s own channel.</li>
+	<li>Teams: all the teams the user is on.</li>
+	<li>Collaborator.</li>
+</ul>
+
+<p>Those three main content types have one thing in common, which are the sites, but other than that, they are different in their own information architecture:</p>
+
+<ul>
+	<li>Personal Sites:
+
+		<ul>
+			<li>Sites</li>
+			<li>Domains</li>
+			<li>0Auth Applications</li>
+			<li>Member Settings</li>
+		</ul></li>
+	<li>Team Site:
+
+		<ul>
+			<li>Sites</li>
+			<li>Domains</li>
+			<li>Members</li>
+			<li>Audit Log</li>
+			<li>Team Settings</li>
+		</ul></li>
+	<li>Collaborator
+
+		<ul>
+			<li>Sites</li>
+			<li>Team Settings</li>
+		</ul></li>
+</ul>
+
+<p>What we are doing with the <em>All Teams</em> selector is surface a sub-navigation item: <em>Sites</em>, to the main content types written above. This leads to:</p>
+
+<ul>
+	<li>Information architecture confusion.</li>
+	<li>Lack of discoverability for sub-navigation related items (domains, members, etc.).</li>
+	<li>Lack of structure/increase of cognitive load to find your site.</li>
+	<li>Sub-navigation is not present because of the general <em>all teams</em> selector.</li>
+</ul>
+
+<h3>Current Status</h3>
+
+<p>The current Netlify solution, though, has a couple of features that help finding the relevant sites our users are looking for, those are:</p>
+
+<ul>
+	<li>Ordering the sites by <em>last site used</em>.</li>
+	<li>Having a search bar at the top (though not in focus).</li>
+</ul>
+
+<h2>Insights</h2>
+
+<p>In this section, I&#39;ll go through the insights I&#39;ve been able to gather from the documentation, personal use, and small user sample I&#39;ve been able to pull in this short exercise.</p>
+
+<p>For that, I&#39;ll document some general learnings I&#39;ve gathered, and the results of a usability testing session I conducted at home with 3 software engineers using the site for the first time (a site with a personal account and a team account).</p>
+
+<p>Needs to be said, though, that I lack three main things:</p>
+
+<ul>
+	<li>Knowledge of previous iterations, and the context of why this is the way it is.</li>
+	<li>Analytics data that I am going to denote in the <em>questions</em> section below.</li>
+	<li>Business goals and data.</li>
+</ul>
+
+<h3>User Groups</h3>
+
+<p>Though I have no context on which users I am designing for, I&#39;ve done some research on Twitter and GitHub showing who is commenting about Netlify, and what I mostly find is:</p>
+
+<ul>
+	<li><em>Age group:</em> 20 to 45.</li>
+	<li><em>Gender:</em> Though mostly men, it wouldn&#39;t make sense to explude non-binary or women in the user group.</li>
+	<li><em>Job:</em> Mostly software developers, some software engineers and some designers with a notion of code.</li>
+	<li><em>Operating Systems:</em> Mostly macOS.</li>
+	<li><em>Account Type:</em> Beginner or Pro.</li>
+</ul>
+
+<h3>Learnings</h3>
+
+<ol>
+	<li>The first data point that I gathered was the fact that Netlify&#39;s biggest user base normally has one team: their personal one, and, therefore the <em>All Teams</em> dropdown hides the sub-navigation and features like <em>domains</em>. However, most of our pro costumers have multiple teams, and in there, it&#39;s not as important to surface the sub-navigation, but more so the name of the team and its sites.</li>
+	<li>Teams have one more level of abstraction versus the personal team one, that means: the personal team one, you select and you have your options, and there&#39;s only one of these distinctive groups. In the other hand, though, you can have multiple teams and collaborate in multiple projects, those are not as unique and require 1 more layer: the one of selecting the team.</li>
+	<li>Because the sub-navigation is tight to the top level content type, there is no way to relate it to some filtering solution on the sites level.</li>
+	<li>In the <em>All Teams</em> dropdown, the sites get abstracted from the level they should be in: one layer deep after selecting the relevant team.</li>
+</ol>
+
+<h3>Usability Testing</h3>
+
+<p>Bear in mind that this is a super tiny user pool to do usability testing and interviewing, but it was worth spending 10 minutes with each participant going through the site.</p>
+
+<ul>
+	<li><em>Location:</em> Barcelona.</li>
+	<li><em>Equipment:</em> iMac 5K and Netlify&#39;s homepage.</li>
+	<li><em>Age group:</em> 20 to 30.</li>
+	<li><em>Occupation:</em> Software Engineers.
+
+		<ul>
+			<li>2 iOS and React Native developers.</li>
+			<li>1 web developer.</li>
+		</ul></li>
+	<li><em>Reason:</em> Go through the site and observe if users understand the layer structure and how teams work in Netlify.</li>
+</ul>
+
+<p><em>Tasks:</em></p>
+
+<ol>
+	<li>Explore the site for a couple of minutes while thinking out loud on everything you find. <em>I want them to feel comfortable with the site, as this is the first time using Netlify</em>.</li>
+	<li>Which are the top three features you can see in this page. <em>Because the feature set is not surfaced at the top level, I want them to see if they can find out domains, etc.</em>.</li>
+	<li>How would you go about registering a custom domain name for your site? This task doesn&#39;t necessarily need to be completed within Netlify.</li>
+	<li>Imagine you are part of an Open Source group called <em>Els Programadors</em>. Can you tell me the members of that group?</li>
+	<li>Imagine you just finished your portfolio, how would you go about deploying your site through Netlify?</li>
+</ol>
+
+<h4>Results Josep Bordes</h4>
+
+<p>The key learnings I got from Josep were that, even though there was some initial confusion with the site at first, being able to have 2 minutes of exploration time allowed him to click on the sites that were shown on the homepage and therefore the top navigation already changed, in which he said:</p>
+
+<blockquote>
+<p>I can see your (the name of the user was mine) name at the top, I wonder why that changed.</p>
+</blockquote>
+
+<p>After clicking on my name, he saw that there was more navigational items and pointed out that he would&#39;ve had some difficulties finding them without that click.</p>
+
+<p>He was pleasantly surprised on how fast the site was.</p>
+
+<h4>Results Didac Florensa</h4>
+
+<p>Didac&#39;s results were pretty similar to Josep&#39;s, he really quickly found that, after clicking on the site you could have additional options and even create more teams, though he didn&#39;t know how to go back to the <em>All Teams</em> page.</p>
+
+<h4>Results Néstor Garcia</h4>
+
+<p>Probably the least tech savvy of the three, Néstor was a bit confused on how the site structure worked. He didn&#39;t see the change of sub-navigation for a team and a personal user at first, until he needed to tell the members of the specific developer group.</p>
+
+<h4>Conclusion</h4>
+
+<p>All in all, the small user pool was pleasantly surprised with Netlify, though the excitement grew a bit more when they would find more features like:</p>
+
+<ul>
+	<li>Creating a new team.</li>
+	<li>Domains.</li>
+	<li>The filtering of sites to make it easier to conceptually understand.</li>
+</ul>
+
+<h3>Questions</h3>
+
+<ul>
+	<li>What are users doing when they get to this site? What are the general/generic funnels?</li>
+	<li>How many users have more than their personal team?</li>
+	<li>How many users ever click on the <em>All Teams</em> dropdown.</li>
+	<li>How many users ever click on the <em>Create New Team</em> button.</li>
+	<li>Of the users that have team accounts, how often do they use their personal accounts.</li>
+	<li>When users are in their team page, do they navigate to the other menus: <em>domains</em>, <em>0Auth Applications</em> and <em>Preferences</em>?</li>
+	<li>Which percentage of users use the search feature?</li>
+</ul>
+
+<h3>Recommendations</h3>
+
+<ul>
+	<li>Surface the top level content types at the top of the navigation.</li>
+	<li>Display the sub navigation right away.</li>
+	<li>Remove redundant sub-navigation items (like Account Settings).</li>
+	<li>Update the positioning of the <em>Create New Site</em> button to be at the top level of the navigation.</li>
+	<li>Add more filters to reorder the site:
+
+		<ul>
+			<li>Latest deployed.</li>
+			<li>Latest touched.</li>
+			<li>Inactives.</li>
+			<li>etc.</li>
+		</ul></li>
+</ul>
+
+<h2>Wireframes</h2>
+
+<p>With all those learnings, I started wire-framing some possible solutions of the surfaced problems above, I wanted to be really intentional and think about past users, as they may be used to the navigational structure and having the latest sites at the top, even if those sites are from teams or personal accounts combined.</p>
+
+<p>However, I wanted to order the layer structure and have something more along the lines of:</p>
+
+<p><code>Homepage → Teams → Sites</code></p>
+
+<figure><img src="Paper.Netlify.1%203.png"/></figure>
+
+<p>The above image shows the first general wireframes of next steps we could take.</p>
+
+<figure><img src="Paper.Netlify.2%203.png"/></figure>
+
+<p>The above shows a simplified page-map structure that has different levels and surfaces only what&#39;s necessary in a more organized manner.</p>
+
+<h2>Solution</h2>
+
+<p>Finally, I took some time to do the visual mocks of the proposed solution:</p>
+
+<ol>
+	<li>First and foremost, this solution needs work of analytics and data to refine the navigation, that is, in order to present the user with the relevant information at all times, we&#39;ll adapt what they see. That is, if users tend to be focused on a specific team, that team will be surfaced first. If they tend to jump around, the all teams toggle will be surfaced, and if they use their personal account, they&#39;ll have that surfaced at the top.</li>
+	<li>The second note about this solution is that we surface the <em>Create a New Team</em> CTA, which may increase our consumer base and trigger an uptick on our plan&#39;s KPIs that I am assuming we have.</li>
+	<li>We include filters to reduce cognitive load—the ones below are just suggestions of what could be made.</li>
+	<li>We surface features such as personal domains or team domains to the homepage, which will surely increase customer awareness and probably improve our metrics and KPIs.</li>
+</ol>
+
+<figure><img src="Paper.Netlify.3%203.png"/></figure>
+
+<h3>Visual Solution</h3>
+
+<figure><img src="Personal.jpg"/></figure>
+
+<p>The screen most users will see first, though, as said, it will adapt. It includes filters to easily find the sites they are looking for, an improved search bar with more copy to help users start typing (also already on focus), and all the options they already have.</p>
+
+<figure><img src="Personal%20Teams.jpg"/></figure>
+
+<p>When selecting the pop up, the background will fade a little bit and the <em>Create a new team</em> CTA will be highlighted.</p>
+
+<figure><img src="Specific.jpg"/></figure>
+
+<p>When a specific team is selected, the <em>My teams</em> selector changes to the selected team: now users know where to find other teams, and it&#39;s just a matter of doing the same interaction as before.</p>
+
+<h3>Alternative Solution</h3>
+
+<figure><img src="Personal%20Alternative.jpg"/></figure>
+
+<p>Another alternative solution is to, instead of having a normal navigation, have a page with the most common sites of every team, ordered by date used.</p>
+
+<p>The issue with this solution, though, is that it has compromises both ways:</p>
+
+<ul>
+	<li>Doesn&#39;t give enough prominence to the teams or personal account.</li>
+	<li>It may be very difficult to navigate when a user has multiple teams.</li>
+</ul>
+
+<h2>Explorations</h2>
+
+<p>Some unused solutions that were explored in the shape of a wireframe:</p>
+
+<figure><img src="Paper.Netlify.6%203.png"/></figure>
+
+<p>An alternative solution to not alienate existing users though still have a consistent navigation and information architecture would be to take all teams and extract the main sub-navigation to the site panel, that means, create collections where now the sites appear and separate them with its sub navigation inside, something like this:</p>
+
+<figure><img src="Paper.Netlify.4%203.png"/></figure>
+
+<p>Having a site navigation would allow users to see all the teams they belong to in a glanceable way. This was discarded due to complexities that appeared on mobile, and was a big deviation of the current solution, so testing the solution later on would&#39;ve been difficult.</p>
+
+<figure><img src="Paper.Netlify.5%203.png"/></figure>
+
+<p>Defaulting to your personal team, or the team you use the most would be a good first step, but wouldn&#39;t really solve the problem for users that may want to see all the sites at once, however, this still is a recommended next step.</p>
+
+<h2>Disclaimer</h2>
+
+<p>A solution that wasn&#39;t explored was to surface sites and domains to the top level navigation, as those are a common thing between both personal teams and other teams, this solution may or may not make sense in the long run for the specific plans of the company, that&#39;s why I tried to be conservative and just keep an iterative flow of our current product.</p>
+
+</body>
+</html>
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/marketing.css" />
+		<title>Netlify – Marketing Exercise</title>
+	</head>
+<body>
+<h1>Netlify – Marketing Exercise</h1>
+
+<h2>Brief</h2>
+
+<p>Our current Enterprise page (netlify.com/enterprise) has a low, yet steady conversion rate, and we would like to improve this rate. People in our Operations team have suggested that other companies found that having the contact form and some testimonials/logos above the fold would help.</p>
+
+<h2>Reframing of the Problem</h2>
+
+<p>Without knowing business goals or long term goals of the product, I am assuming the KPI we are trying to tackle in this exercise is <em>how to increase the conversion rate of visitors that visit the site vs visitors that actually contact us</em>.</p>
+
+<p>This is a problem that is heavily related to data, so there are a bunch of questions that won&#39;t be answered here, but the problem we are trying to solve is essentially:</p>
+
+<ul>
+	<li>Increase the conversion rate of people contacting us.</li>
+	<li>Fix any usability or visibility issue on the overall site.</li>
+</ul>
+
+<h2>Content Audit</h2>
+
+<h3>General</h3>
+
+<p>By doing a walkthrough of the page—not only the enterprise one, but in general, you quickly realize that there are few CTAs that link to the enterprise page—even though that&#39;s a problem, we won&#39;t be solving or proposing that a solution, as the exercise is how to increase metrics in <em>this</em> page.</p>
+
+<h3>Enterprise Site</h3>
+
+<ol>
+	<li>The contact us CTA is not in a prominent spot across the page (in this page we want them to contact vs log in or sign up).</li>
+	<li>Enterprise needs to be more prominent, landing here may, or may not give you enough indication that this is a corporate page.</li>
+	<li>Testimonials are good because they provide social validation, though any company can put logos on their site and call it a day. Having top software engineers of the companies would help reinforce the social proof.</li>
+	<li>The overall copy of the site could be improved, specially the button <em>Get in touch</em>, this could say <em>Send</em>, and we could A/B test that to see if it improved.</li>
+	<li>There is no way to contact via a phone number, which some companies and competitors offer.</li>
+	<li>Having autodetect things like the phone number code would increase the number of people that add the phone number, even if it&#39;s optional.</li>
+	<li>Though the site explains some of the features that Netlify has, a way to increase the social proof of the site would be to add the integration with other platforms (such as GitHub, GitLab, etc.).</li>
+	<li>The statistics of the page feel to good to be true, having proof, or a link that goes to the status, or even the numbers of the stats increasing over time would be a really nice touch, right now they are the center of attention.</li>
+	<li>The navigation doesn&#39;t follow you when you scroll, or at least when you scroll up, that doesn&#39;t mean that branding gets lost, but it would be nice to have that together with a fix for point <em>1</em>.</li>
+	<li>Clicking on the contact us button doesn&#39;t animate the scroll, this may not seem important, but together with <em>9</em> can feel a bit disconcerting.</li>
+	<li>Though the main value proposition of Netlify is explained in the homepage, relevant users of this page may land here directly, an explanation wouldn&#39;t hurt.</li>
+	<li>There is no way to contact support from this site, an Intercom link wouldn&#39;t hurt.</li>
+	<li>Contact forms feel a bit random, that&#39;s why adding a phone number would probably help increase the number of people that contact us, however, adding a small text that says when we&#39;ll get back to you would be really nice.</li>
+	<li>After the message has been sent, the page reloads to a different one that doesn&#39;t feel related to what I was doing.</li>
+</ol>
+
+<h2>User Groups</h2>
+
+<p>Because multiple types of users may visit this page, I am assuming one type of simple persona that could visit the site:</p>
+
+<ul>
+	<li><em>Age group:</em> 20 to 45.</li>
+	<li><em>Gender:</em> Men, women and non-binary.</li>
+	<li><em>Job:</em> Software developers, engineers, human resource managers or accountants.</li>
+	<li><em>Operating Systems:</em> Mostly macOS or Windows.</li>
+</ul>
+
+<p>This user group is broader than the one in the previous exercise, and because of that, we&#39;ll need to make sure we speak a broader language:</p>
+
+<ul>
+	<li>We need to consider important testimonials and have real people add the social proof we need to our page—not just logos of companies.</li>
+	<li>Our target group are busy people, and because of that, they may consider another solution if they don&#39;t know when to expect an answer.</li>
+	<li>Because we are not necessarily targeting tech savvy users, we may need to put more affordances in the way the contact form appears or is displayed.</li>
+</ul>
+
+<h2>Analytics Questions</h2>
+
+<ul>
+	<li>Are users scrolling to the contact form?</li>
+	<li>What&#39;s the funnel of people clicking the <em>contact us</em> button on the header and people actually contacting us?</li>
+	<li>How many people bounce after arriving at the page?</li>
+	<li>When do they bounce (scroll and time).</li>
+	<li>How many people that reach the form at the bottom bounce?</li>
+	<li>How many people start entering values but don&#39;t send the form?</li>
+	<li>How many people mistakenly click on the form&#39;s CTA?</li>
+</ul>
+
+<p>Answering those questions would help have a more informed solution, and would certainly make it easier, not only to test, but also to check the increase or decrease of our metrics.</p>
+
+<h2>Proposed Solutions</h2>
+
+<p>Because the task asks to do an iterative change to the page, vs a different design or way to present the form: i.e. it would make sense for users that have already read our pricing page to contact us directly by having an overlay that contains a simple form, some testimonials for social proof, and potentially our phone number.</p>
+
+<p>With that said, we&#39;ll focus our efforts on the enterprise page, as I am assuming users get there via a link they open or copy on their browsers.</p>
+
+<p>It&#39;s also important to note that this won&#39;t be a big overhaul of the visual design, but rather, some marginal improvements that we can then A/B test over a period of time to see if it really has made a difference or not.</p>
+
+<h3>First Change</h3>
+
+<p>We make the navigation sticky and substitute the top right links to log in or sign up for an actual contact us button that will follow users everywhere. This will:</p>
+
+<ul>
+	<li>Reinforce the main CTA of the page, which is to contact us.</li>
+	<li>Allow users to know where they are at all times.</li>
+</ul>
+
+<h3>Second Change</h3>
+
+<p>We reinforce the idea that this is a <em>special</em> kind of pricing, this will serve as a trigger to contact, as the page will be tailored made for the actual people that visit the site.</p>
+
+<ul>
+	<li>Allow users to know where they are at all times.</li>
+	<li>Make them feel special by being in our enterprise page.</li>
+</ul>
+
+<h3>Third Change</h3>
+
+<p>This is probably the most important change of all, but it would be really crucial to show actual testimonials people can relate to. It&#39;s really nice to have logos of the companies, but I am not sure if the clients that visit this page actually know what Cisco or Atlassian is. What they don&#39;t know for sure is if that&#39;s true or not.</p>
+
+<ul>
+	<li>If we can put <em>real</em> people that have used our product and have something nice to say, that would reinforce the social proof of our page and would make it human and approachable.</li>
+</ul>
+
+<h3>Fourth Change</h3>
+
+<p>Add a direct way of communication. Like I mention below, it would be interesting to get a phone number in the page, but even more interesting would be to actually get an <em>Intercom</em> kind of solution that would allow users that may not fully understand the page (HR managers, accountants, etc.) actually talk to us.</p>
+
+<ul>
+	<li>If they talk to us, there will be the feeling of reciprocity: “we feel a sense of obligation to return favors to people who have done something for us”.</li>
+</ul>
+
+<h3>Fifth Change</h3>
+
+<p>Because some users may land here directly, it would be interesting to show some of the features <em>and</em> integrations that our product has. Though that&#39;s on the homepage, if we took the decision of creating a brand new page for enterprise instead of just a contact form on an overlay, we should treat it as one and display everything our product can do for your company.</p>
+
+<ul>
+	<li>This adds social proof to our page.</li>
+</ul>
+
+<h3>Minor Improvements</h3>
+
+<ul>
+	<li>When clicking on the button to contact us, scroll the page to the form, don&#39;t just jump to it.</li>
+	<li>A/B test other writing, <em>Get in touch</em> may not be the best label for a CTA that <em>sends</em> a message.</li>
+	<li>Add a phone number next to the contact form, this will allow users to contact us directly, without having to wait—they have a special price, so they should be treated with preference, too.</li>
+	<li>Present the good things Netlify has with more specific numbers and real time data they can check.</li>
+	<li>A/B test the panel position to contact us—it doesn&#39;t need to be necessarily above the fold, specially when we have two main CTAs saying to <em>contact us</em>, and we potentially make the change to present the panel as an overlay in every other site—but, but it doesn&#39;t hurt to try new positions (have the features further below, the testimonials up and the contact in the middle for instance).</li>
+</ul>
+
+<figure><img src="Enterprise%20Top.jpg"/></figure>
+
+<p>A sticky navigation with the main CTA of the page and a phone number for easy contact. People tend to forget about things they want <em>now</em> if they have to wait only a day. It&#39;s important to be able to have direct communication.</p>
+
+<p>On top of that, we add a channel such as Intercom, which helps users with FAQs.</p>
+
+<figure><img src="Enterprise%20Stats.jpg"/></figure>
+
+<p>Live stats give a sense of social proof, and shows that Netlify is always working. Something is always happening here.</p>
+
+<figure><img src="Enterprise%20Stories.jpg"/></figure>
+
+<p>Real user stories, with a video interview (ideally 3), with real companies and real testimonials of important people and stakeholders from those companies—CTOs, CEOs, etc.</p>
+
+<figure><img src="Enterprise%20Contact.jpg"/></figure>
+
+<p>The contact form gets redesign with a more modern and professional look more inline with the enterprise display of the page.</p>
+
+<h2>Visual Changes</h2>
+
+<figure><img src="Enterprise%20Intercom.jpg"/></figure>
+
+</body>
+</html>
+
