@@ -2,7 +2,7 @@ body {
 	font-size:   13pt;
 	color:       #222;
 	background:  #fbfbfb;
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, Helvetica, sans-serif;
 	line-height: 1.4;
 	margin:      10%;
 }
