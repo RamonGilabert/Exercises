@@ -1,46 +1,48 @@
 body {
 	font-size:   13pt;
 	color:       #222;
-	background:  #fbfbfb;
+	background:  #F7FAFB;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, Helvetica, sans-serif;
 	line-height: 1.4;
 	margin:      10%;
+	max-width: 840px;
+	margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
+	font-weight: 600;
 	color:       #111;
 }
 
 h1 {
 	font-size:     3em;
 	line-height:   1;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 	margin-top:    2em;
 }
 
 h2 {
 	font-size:     2em;
-	margin-bottom: 0.75em;
-	margin-top:    1.5em;
+	margin-bottom: 0.25em;
+	margin-top:    1em;
 }
 
 h3 {
 	font-size:   1.5em;
 	line-height: 1;
-	margin-top:  1.5em;
+	margin-top:  1em;
 }
 
 h4 {
 	font-size:     1.2em;
 	line-height:   1.25;
-	margin-bottom: 1.25em;
+	margin-bottom: 0.25em;
 }
 
 h5 {
 	font-size:     1em;
 	font-weight:   bold;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.25em;
 }
 
 h6 {
@@ -54,10 +56,13 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
 
 img {
 	max-width: 100%;
+	padding-bottom: 24px;
+	padding-top: 24px;
 }
 
 p {
 	margin: 0 0 1.5em;
+	line-height: 1.6;
 }
 
 a:focus, a:hover {
@@ -101,8 +106,9 @@ li ul, li ol {
 }
 
 ul, ol {
-	margin:       0 3em 1.5em 1.5em;
+	margin:       0 3em 1em 1em;
 	padding-left: 1.5em;
+	line-height: 1.6;
 }
 
 ul {
