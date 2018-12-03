@@ -5,8 +5,27 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, Helvetica, sans-serif;
 	line-height: 1.4;
 	margin:      10%;
-	max-width: 840px;
+	max-width: 760px;
 	margin: 0 auto;
+}
+
+.links a {
+	display: block;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	cursor: pointer;
+}
+
+.links {
+	margin-bottom: 80vh;
+}
+
+.home {
+	margin-bottom: auto;
+}
+
+.exercises {
+	margin-bottom: 48px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,26 +43,26 @@ h1 {
 h2 {
 	font-size:     2em;
 	margin-bottom: 0.5em;
-	margin-top:    1em;
+	margin-top:    1.5em;
 }
 
 h3 {
 	font-size:   1.5em;
 	line-height: 1;
 	margin-bottom: 0.5em;
-	margin-top:  1em;
+	margin-top:  1.5em;
 }
 
 h4 {
 	font-size:     1.2em;
 	line-height:   1.25;
-	margin-bottom: 0.25em;
+	margin-bottom: 0.5em;
 }
 
 h5 {
 	font-size:     1em;
 	font-weight:   bold;
-	margin-bottom: 0.25em;
+	margin-bottom: 0.5em;
 }
 
 h6 {
@@ -57,8 +76,9 @@ h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
 
 img {
 	max-width: 100%;
-	padding-bottom: 24px;
-	padding-top: 24px;
+	margin-bottom: 24px;
+	margin-top: 24px;
+	box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.05);
 }
 
 p {
@@ -130,10 +150,6 @@ figcaption {
 	font-size:     0.75em;
 	padding:       0.5em 2em;
 	margin-bottom: 2em;
-}
-
-figure img {
-	margin-bottom: 0px;
 }
 
 hr {
