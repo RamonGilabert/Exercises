@@ -3,7 +3,7 @@ body {
 	color:       #222;
 	background:  #F7FAFB;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, Helvetica, sans-serif;
-	line-height: 1.4;
+	line-height: 1.7;
 	margin:      10%;
 	max-width: 760px;
 	margin: 0 auto;
@@ -17,7 +17,7 @@ body {
 }
 
 .links {
-	margin-bottom: 80vh;
+	margin-bottom: 82vh;
 }
 
 .home {
@@ -25,7 +25,7 @@ body {
 }
 
 .exercises {
-	margin-bottom: 48px;
+	margin-bottom: 40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,7 +83,7 @@ img {
 
 p {
 	margin: 0 0 1.5em;
-	line-height: 1.6;
+	line-height: 1.7;
 }
 
 a:focus, a:hover {
